@@ -1,13 +1,3 @@
-forty_two_art = {
-	"	     :::     ::::::::",
-	"      :+:     :+:    :+:",
-	"    +:+ +:+        +:+  ",
-	"  +#+  +:+       +#+    ",
-	"+#+#+#+#+#+   +#+       ",
-	"     #+#    #+#         ",
-	"	###   ########.fr    "
-}
-
 local function header_already_in_file()
 	return false
 end
