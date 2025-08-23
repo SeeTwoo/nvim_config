@@ -43,6 +43,13 @@ require("lazy").setup({
 					section_separators = { left = "", right = "" },
 					component_separators = { left = "", right = "" },
 				},
+				sections = {
+					lualine_x = {
+						{'encoding', padding = {left = 30}},
+						'fileformat',
+						'filetype',
+					}
+				}
 			})
 		end,
 	},
