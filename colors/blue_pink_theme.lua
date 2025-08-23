@@ -21,6 +21,8 @@ local	function MyHighlighting()
 
 	vim.api.nvim_set_hl(0, "ColorColumn", {bg = "DimGrey"})
 	vim.api.nvim_set_hl(0, "Normal", {bg = "Black"})
+	vim.api.nvim_set_hl(0, "FloatBorder", {fg = "LightBlue"})
+	vim.api.nvim_set_hl(0, "NormalFloat", {fg = "Thistle"})
 end
 
 MyHighlighting()
