@@ -21,7 +21,7 @@ require("lazy").setup({
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-			require ("plugin_configs.lspconfig")
+			require ("plugin_configs.lspconfig").setup()
 		end,
 	},
 	{
