@@ -10,6 +10,7 @@ vim.opt.showmode = false
 vim.opt.showcmd = false
 vim.opt.ruler = false
 vim.opt.cmdheight = 0
+vim.opt.hlsearch = false
 
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 
