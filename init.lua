@@ -9,7 +9,7 @@ vim.opt.colorcolumn = "81"
 vim.opt.showmode = false
 vim.opt.showcmd = false
 vim.opt.ruler = false
-vim.opt.cmdheight = 0
+--vim.opt.cmdheight = 0
 vim.opt.hlsearch = false
 
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
@@ -17,8 +17,19 @@ vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 require("lazy").setup({
 	"mfussenegger/nvim-dap",
 	"rcarriga/nvim-dap-ui",
-	"neovim/nvim-lspconfig",
-	"williamboman/mason.nvim",
+	{
+		"neovim/nvim-lspconfig",
+		lazy = false,
+		config = function()
+			require ("plugin_configs.lspconfig")
+		end,
+	},
+	{
+		"williamboman/mason.nvim",
+		config = function()
+			require ("mason").setup()
+		end,
+	},
 	"mfussenegger/nvim-lint",
 	{
 		"nvim-treesitter/nvim-treesitter",
