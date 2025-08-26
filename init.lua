@@ -24,76 +24,19 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = function()
-			require("nvim-treesitter.configs").setup {
-				ensure_installed = {"c", "lua", "cpp"},
-				sync_install = false,
-				auto_install = true,
-				highlight = {
-					enable = true,
-					additional_vim_regex_highlighting = false,
-				},
-			}
+			require ("plugin_configs.treesitter")
 		end
 	},
 	{
 		"nvim-lualine/lualine.nvim",
 		config = function()
-			require("lualine").setup({
-				options = {
-					theme = require("blue_pink_lualine_theme"),
-					section_separators = { left = "", right = "" },
-					component_separators = { left = "", right = "" },
-				},
-				sections = {
-					lualine_x = {
-						{'encoding', padding = {left = 30}},
-						'fileformat',
-						'filetype',
-					}
-				}
-			})
+			require ("plugin_configs.lualine")
 		end,
 	},
 	{
 		"folke/noice.nvim",
 		config = function()
-			require("noice").setup({
-				cmdline = {
-					enabled = true,
-					view = "cmdline_popup",
-					format = {
-						cmdline = {pattern = "^:", icon = "", lang = "vim"},
-						search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex" },
-						search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex" },
-					},
-				},
-				messages = { enabled = false }, -- disable messages
-				popupmenu = { enabled = false }, -- keep completion simple (use cmp if you want)
-				notify = { enabled = false }, -- disable notifications
-				lsp = { progress = { enabled = false }, signature = { enabled = false }, hover = { enabled = false } },
-				views = {
-					cmdline_popup = {
-						position = {
-							row = "25%",   -- upper quarter of the screen
-							col = "50%",
-						},
-						size = {
-							width = 60,
-							height = "auto",
-						},
-						border = {
-							style = "rounded",
-							padding = { 0, 1 },
-						},
-						win_options = {
-							winhighlight = {
-								Normal = "NormalFloat",
-								FloatBorder = "FloatBorder",
-							},
-						},
-					},
-				},
-			})
+			require("plugin_configs.noice")
 		end,
 	},
 })
