@@ -1,22 +1,19 @@
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.autoindent = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.guicursor = ""
-vim.opt.colorcolumn = "81"
-vim.opt.showmode = false
-vim.opt.showcmd = false
-vim.opt.ruler = false
---vim.opt.cmdheight = 0
-vim.opt.hlsearch = false
-
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 
 require("lazy").setup({
 	"mfussenegger/nvim-dap",
 	"rcarriga/nvim-dap-ui",
+	"mfussenegger/nvim-lint",
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+	},
+	{
+		"ibhagwan/fzf-lua",
+	},
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+	},
 	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
@@ -30,7 +27,6 @@ require("lazy").setup({
 			require ("mason").setup()
 		end,
 	},
-	"mfussenegger/nvim-lint",
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -53,5 +49,5 @@ require("lazy").setup({
 })
 
 vim.cmd.colorscheme("blue_pink_theme")
-
+require("set")
 require("stdheader")

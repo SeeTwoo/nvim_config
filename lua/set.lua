@@ -1,0 +1,13 @@
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.autoindent = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.guicursor = ""
+vim.opt.colorcolumn = "81"
+vim.opt.showmode = false
+vim.opt.showcmd = false
+vim.opt.ruler = false
+--vim.opt.cmdheight = 0
+vim.opt.hlsearch = false

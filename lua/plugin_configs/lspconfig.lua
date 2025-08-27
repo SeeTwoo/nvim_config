@@ -8,7 +8,7 @@ function M.setup()
 		local opts = { buffer = bufnr }
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-		vim.keymap.set("n", "gr", vim.lsp.buf.reference, opts)
+--		vim.keymap.set("n", "gr", vim.lsp.buf.reference, opts)
 	end
 
 	-- full path to clangd from mason
