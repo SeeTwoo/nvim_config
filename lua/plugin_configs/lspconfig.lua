@@ -1,4 +1,3 @@
-
 local M = {}
 
 function M.setup()
@@ -8,7 +7,7 @@ function M.setup()
 		local opts = { buffer = bufnr }
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
---		vim.keymap.set("n", "gr", vim.lsp.buf.reference, opts)
+		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 	end
 
 	-- full path to clangd from mason
@@ -20,6 +19,22 @@ function M.setup()
 	})
 	lspconfig.lua_ls.setup {
 		on_attach = on_attach,
+		settings = {
+			Lua = {
+				runtime = {
+					version = "LuaJIT",  -- Neovim uses LuaJIT
+				},
+				diagnostics = {
+					globals = { "vim" }, -- stop "vim" being underlined
+				},
+				workspace = {
+					library = vim.api.nvim_get_runtime_file("", true), -- Neovim runtime
+				},
+				telemetry = {
+					enable = false,
+				},
+			},
+		},
 	}
 	lspconfig.rust_analyzer.setup {
 		on_attach = on_attach,

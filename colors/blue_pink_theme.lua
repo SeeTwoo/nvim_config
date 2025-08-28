@@ -1,6 +1,7 @@
 vim.opt.termguicolors = true
 
 local	function MyHighlighting()
+	--basic coding
 	vim.api.nvim_set_hl(0, "@preproc", {fg = "LightBlue"})
 	vim.api.nvim_set_hl(0, "@keyword", {fg = "DeepPink"})
 	vim.api.nvim_set_hl(0, "@type", {fg = "Cyan"})
@@ -16,13 +17,34 @@ local	function MyHighlighting()
 	vim.api.nvim_set_hl(0, "@number", {fg = "Violet"})
 	vim.api.nvim_set_hl(0, "@macro", {fg = "Orchid"})
 
+	--ui (search and color column)
 	vim.api.nvim_set_hl(0, "Search", {fg = "Black", bg = "LightBlue"})
 	vim.api.nvim_set_hl(0, "IncSearch", {fg = "Black", bg = "LightBlue"})
 
 	vim.api.nvim_set_hl(0, "ColorColumn", {bg = "DimGrey"})
-	vim.api.nvim_set_hl(0, "Normal", {bg = "Black"})
+	vim.api.nvim_set_hl(0, "Normal", {bg = "Black", fg = "White"})
 	vim.api.nvim_set_hl(0, "FloatBorder", {fg = "LightBlue"})
 	vim.api.nvim_set_hl(0, "NormalFloat", {fg = "Thistle"})
+
+	--ui (Neotree)
+	vim.api.nvim_set_hl(0, "NeoTreeNormal", {bg = "Black"})
+	vim.api.nvim_set_hl(0, "NeoTreeNormal", {fg = "White"})
+
+	vim.api.nvim_set_hl(0, "NeoTreeRootName", {fg = "SteelBlue"})
+
+	vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", {fg = "Violet"})
+	vim.api.nvim_set_hl(0, "NeoTreeDirectoryIcon", {fg = "Violet"})
+
+	vim.api.nvim_set_hl(0, "NeoTreeFileNameOpened", {fg = "Violet"})
+
+	vim.api.nvim_set_hl(0, "NeoTreeGitModified", {fg = "White"})
+	vim.api.nvim_set_hl(0, "NeoTreeGitStaged", {fg = "White"})
+	vim.api.nvim_set_hl(0, "NeoTreeGitUntracked", {fg = "DeepPink"})
+
+	vim.api.nvim_set_hl(0, "NeoTreeSeparatorActive", {fg = "Thistle"})
+	vim.api.nvim_set_hl(0, "NeoTreeSeparatorInactive", {fg = "Thistle"})
+
+	vim.api.nvim_set_hl(0, "NeoTreeDimText", {fg = "White"})
 end
 
 MyHighlighting()

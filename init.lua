@@ -6,6 +6,14 @@ require("lazy").setup({
 	"mfussenegger/nvim-lint",
 	{
 		"nvim-neo-tree/neo-tree.nvim",
+		config = function ()
+			require ("plugin_configs.neotree")
+		end,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanwim/nui.nvim",
+		}
 	},
 	{
 		"ibhagwan/fzf-lua",
