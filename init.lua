@@ -17,6 +17,9 @@ require("lazy").setup({
 	},
 	{
 		"ibhagwan/fzf-lua",
+		config = function ()
+			require ("plugin_configs.fzf")
+		end,
 	},
 	{
 		"ThePrimeagen/harpoon",
