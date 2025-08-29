@@ -4,9 +4,9 @@ local function insert_class_skeleton(className)
         "\tprivate:",
         "\tpublic:",
         "\t\t" .. className .. "();",
-        "\t\t~" .. className .. "();",
         "\t\t" .. className .. "(const " .. className .. "&);",
         "\t\t" .. className .. "& operator=(const " .. className .. "&);",
+        "\t\t~" .. className .. "();",
         "};"
     }
     vim.api.nvim_put(lines, "l", true, true)
