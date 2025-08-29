@@ -62,3 +62,4 @@ require("lazy").setup({
 vim.cmd.colorscheme("blue_pink_theme")
 require("set")
 require("stdheader")
+require("classes")
