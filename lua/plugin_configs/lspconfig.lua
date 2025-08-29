@@ -41,6 +41,7 @@ function M.setup()
 	}
 	vim.diagnostic.config({
 		signs = false,
+		underline = false,
 	})
 end
 
