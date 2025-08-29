@@ -12,7 +12,7 @@ require("lazy").setup({
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons",
-			"MunifTanwim/nui.nvim",
+			"MunifTanjim/nui.nvim",
 		}
 	},
 	{

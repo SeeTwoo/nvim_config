@@ -39,6 +39,9 @@ function M.setup()
 	lspconfig.rust_analyzer.setup {
 		on_attach = on_attach,
 	}
+	vim.diagnostic.config({
+		signs = false,
+	})
 end
 
 return M
