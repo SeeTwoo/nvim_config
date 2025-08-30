@@ -1,4 +1,6 @@
 require("noice").setup({
+	popupmenu = { enabled = false }, -- keep completion simple (use cmp if you want)
+	lsp = { progress = { enabled = false }, signature = { enabled = false }, hover = { enabled = false } },
 	cmdline = {
 		enabled = true,
 		view = "cmdline_popup",
@@ -8,10 +10,14 @@ require("noice").setup({
 			search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex" },
 		},
 	},
-	messages = { enabled = false }, -- disable messages
-	popupmenu = { enabled = false }, -- keep completion simple (use cmp if you want)
-	notify = { enabled = false }, -- disable notifications
-	lsp = { progress = { enabled = false }, signature = { enabled = false }, hover = { enabled = false } },
+	messages = {
+		enabled = true,
+		--view = "cmdline_popup",
+	},
+	notify = {
+		enabled = false,
+		view = "cmdline_popup",
+	},
 	views = {
 		cmdline_popup = {
 			position = {

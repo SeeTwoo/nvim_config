@@ -11,4 +11,4 @@ vim.opt.showcmd = false
 vim.opt.ruler = false
 --vim.opt.cmdheight = 0
 vim.opt.hlsearch = false
---vim.g.mapleader = " "
+vim.g.mapleader = " "

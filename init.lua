@@ -1,9 +1,13 @@
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 
+require("set")
 require("lazy").setup({
 	"mfussenegger/nvim-dap",
 	"rcarriga/nvim-dap-ui",
 	"mfussenegger/nvim-lint",
+	{
+		"nvim-tree/nvim-web-devicons",
+	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		config = function ()
@@ -11,7 +15,6 @@ require("lazy").setup({
 		end,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
 		}
 	},
@@ -60,6 +63,6 @@ require("lazy").setup({
 })
 
 vim.cmd.colorscheme("blue_pink_theme")
-require("set")
 require("stdheader")
 require("classes")
+require("curlyBraceMatch")
