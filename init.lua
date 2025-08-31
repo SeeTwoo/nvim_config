@@ -60,9 +60,14 @@ require("lazy").setup({
 			require("plugin_configs.noice")
 		end,
 	},
+	{
+		"windwp/nvim-autopairs",
+		config = function()
+			require("plugin_configs.autopairs")
+		end,
+	},
 })
 
 vim.cmd.colorscheme("blue_pink_theme")
 require("stdheader")
 require("classes")
-require("curlyBraceMatch")
