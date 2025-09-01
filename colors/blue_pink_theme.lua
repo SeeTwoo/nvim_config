@@ -32,13 +32,13 @@ local	function MyHighlighting()
 
 	vim.api.nvim_set_hl(0, "NeoTreeRootName", {fg = "SteelBlue"})
 
-	vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", {fg = "Violet"})
-	vim.api.nvim_set_hl(0, "NeoTreeDirectoryIcon", {fg = "Violet"})
+	vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", {fg = "LightBlue"})
+	vim.api.nvim_set_hl(0, "NeoTreeDirectoryIcon", {fg = "Lightblue"})
 
 	vim.api.nvim_set_hl(0, "NeoTreeFileNameOpened", {fg = "Violet"})
 	vim.api.nvim_set_hl(0, "NeoTreeFileIcon", {fg = "Violet"})
 
-	vim.api.nvim_set_hl(0, "NeoTreeGitModified", {fg = "White"})
+	vim.api.nvim_set_hl(0, "NeoTreeGitModified", {fg = "DeepPink"})
 	vim.api.nvim_set_hl(0, "NeoTreeGitStaged", {fg = "White"})
 	vim.api.nvim_set_hl(0, "NeoTreeGitUntracked", {fg = "DeepPink"})
 
