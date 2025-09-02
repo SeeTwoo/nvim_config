@@ -46,6 +46,10 @@ local	function MyHighlighting()
 	vim.api.nvim_set_hl(0, "NeoTreeSeparatorInactive", {fg = "Thistle"})
 
 	vim.api.nvim_set_hl(0, "NeoTreeDimText", {fg = "White"})
+	--ui (Dashboard)
+	vim.api.nvim_set_hl(0, "SnacksDashboardIcon", {fg = "Cyan"})
+	vim.api.nvim_set_hl(0, "SnacksDashboardDesc", {fg = "White"})
+	vim.api.nvim_set_hl(0, "SnacksDashboardKey", {fg = "DeepPink"})
 end
 
 MyHighlighting()

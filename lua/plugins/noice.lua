@@ -15,7 +15,7 @@ return {
 					},
 				},
 				messages = {
-					enabled = true,
+					enabled = false,
 					--view = "cmdline_popup",
 				},
 				notify = {
