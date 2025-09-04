@@ -10,7 +10,7 @@ vim.opt.shiftwidth = 4
 
 vim.opt.guicursor = ""
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 25
 vim.opt.wrap = false
 
 vim.opt.showmode = false
