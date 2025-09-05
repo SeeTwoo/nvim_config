@@ -1,8 +1,8 @@
-vim.cmd.colorscheme("blue_pink_theme")
 require("set")
 require("stdheader")
 require("classes")
 require("config.lazy")
+vim.cmd.colorscheme("blue_pink_theme")
 
 --[[require("set")
 require("lazy").setup({

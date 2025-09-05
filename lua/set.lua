@@ -1,17 +1,14 @@
 vim.opt.number = true
-
 vim.opt.relativenumber = true
-
 vim.opt.autoindent = true
-
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-
-vim.opt.guicursor = ""
-
 vim.opt.scrolloff = 25
 vim.opt.wrap = false
+
+vim.opt.guicursor = ""
+vim.opt.termguicolors = true
 
 vim.opt.showmode = false
 vim.opt.showcmd = false
