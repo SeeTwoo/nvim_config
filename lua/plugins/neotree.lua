@@ -8,6 +8,10 @@ return {
 			require("neo-tree").setup({
 				window = {
 					position = "float",
+					popup = {
+						position = "50%",
+						border = "rounded",
+					}
 				},
 				vim.keymap.set("n", "<Leader>nt", ":Neotree toggle<CR>", {desc = "Toggle Neo-tree" })
 			})
