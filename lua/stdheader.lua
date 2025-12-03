@@ -2,10 +2,16 @@ local function header_already_in_file()
 	return false
 end
 
+local function get_timestamp()
+	return os.date("%Y/%m/%d %H:%M:%S")
+end
+
 local function draw_header()
 	local fileName = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":t")
 	local user = vim.env.USER or "marvin"
 	local mail = vim.env.MAIL or "marvin@42students.fr"
+	local timestamp = get_timestamp()
+
 	local header = {
 	"/* ************************************************************************** */",
 	"/*                                                                            */",
@@ -14,8 +20,8 @@ local function draw_header()
 	"/*                                                     +:+ +:+        +:+     */",
 	"/*   By: " .. user .. " <" .. mail .. ">" .. string.rep(" ", 41 - #user - #mail) .. "+#+  +:+       +#+       */",
 	"/*                                                 +#+#+#+#+#+   +#+          */",
-	"/*   Created:                                           #+#    #+#            */",
-	"/*   Uptated:                                          ###   ########.fr      */",
+	"/*   Created: " .. timestamp .. " by " .. user .. string.rep(" ", 18 - #user) .. "#+#    #+#             */",
+	"/*   Updated: " .. timestamp .. " by " .. user .. string.rep(" ", 17 - #user) .. "###   ########.fr       */",
 	"/*                                                                            */",
 	"/* ************************************************************************** */",
 	""
