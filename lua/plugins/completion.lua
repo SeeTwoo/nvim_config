@@ -4,13 +4,16 @@ return {
 	dependencies =  {"hrsh7th/cmp-nvim-lsp"},
 	config = function()
 		local cmp = require("cmp")
+
 		cmp.setup({
-			completion = {autocomplete = false},
+			completion = {
+				autocomplete = { cmp.TriggerEvent.TextChanged },
+			},
 			sources = {
 				{name = "nvim_lsp"}
 			},
 			mapping = cmp.mapping.preset.insert({
-				["<C-Space>"] = cmp.mapping.complete(),
+				["<CR>"] = cmp.mapping.confirm({ select = false }),
 			})
 		})
 	end

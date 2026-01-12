@@ -14,17 +14,8 @@ return {
 		end
 		local clangd_path = vim.fn.stdpath("data") .. "/mason/bin/clangd"
 		lspconfig.clangd.setup({
-			cmd = {
-				clangd_path,
-				"--background-index",
-				"--clang-tidy",
-				"--completion-style=detailed",
-				"--header-insertion=never",
-				"--fallback-style=none",
-			},
 			on_attach = on_attach,
 			capabilities = capabilities,
-			completion = {enable = true},
 		})
 		lspconfig.lua_ls.setup {
 			on_attach = on_attach,
