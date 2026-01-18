@@ -1,18 +1,13 @@
 return {
 	"folke/snacks.nvim",
 	opts = {
+		---@type snacks.Config
+		indent = {
+			enabled = true
+		},
 		dashboard = {
 			preset = {
---[[				header = [[
-        ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
-        ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
-        ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       
-        ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
-        ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║           
-        ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝           
- ]]--,
-        -- stylua: ignore
-        ---@type snacks.dashboard.Item[]
+			---@type snacks.dashboard.Item[]
 				header = [[
    ████████  ████████ 
   ██               ██ 
@@ -23,7 +18,7 @@ return {
 				keys = {
 					{ icon = " ", key = "f", desc = "Find File", action = "<Leader>ff" },
 					{ icon = " ", key = "g", desc = "Find Text", action = "<Leader>fg" },
-					{ icon = "󰙅 ", key = "t", desc = "Browse tree", action = "<Leader>nt" },
+					{ icon = "󰙅 ", key = "t", desc = "Browse tree", action = "<C-t>" },
 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
 			},
