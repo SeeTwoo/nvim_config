@@ -20,6 +20,7 @@ vim.opt.hlsearch = false
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>w", ":w<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "<C-q>", ":q!<CR>", {noremap = true, silent = true})
 
 vim.api.nvim_create_augroup("conditionalColumn", {clear = true})
 

@@ -1,0 +1,9 @@
+keybinds
+
+- harpoon
+	- <leader>ha		: add file to harpoon
+	- <leader>hr		: remove file from harpoon
+	- <leader>hu		: see harpoon ui
+	- <leader><number>	: move to harpoon <number> file
+
+- 
