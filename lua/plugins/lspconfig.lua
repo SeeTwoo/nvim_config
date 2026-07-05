@@ -2,46 +2,45 @@ return {
 	"neovim/nvim-lspconfig",
 	lazy = false,
 	config = function()
-		local lspconfig = require("lspconfig")
+		vim.api.nvim_create_autocmd("LspAttach", {
+			callback = function(args)
+				local bufnr = args.buf
+				local opts = {buffer = bufnr}
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+			end,
+		})
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		local on_attach = function(_, bufnr)
-			local opts = { buffer = bufnr }
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-			vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-		end
 		local clangd_path = vim.fn.stdpath("data") .. "/mason/bin/clangd"
-		lspconfig.clangd.setup({
-			on_attach = on_attach,
+		vim.lsp.config("clangd", {
+			cmd = {clangd_path},
 			capabilities = capabilities,
 		})
-		lspconfig.lua_ls.setup {
-			on_attach = on_attach,
+
+		vim.lsp.config("lua_ls", {
+			capabilities = capabiilties,
 			settings = {
-				Lua = {
-					runtime = {
-						version = "LuaJIT",  -- Neovim uses LuaJIT
-					},
-					diagnostics = {
-						globals = { "vim" }, -- stop "vim" being underlined
-					},
-					workspace = {
-						library = vim.api.nvim_get_runtime_file("", true), -- Neovim runtime
-					},
-					telemetry = {
-						enable = false,
-					},
+				lua = {
+					runtime = { version = "LuaJIT"},
+					diagnostics = { globals = { "vim" }},
+					workspace = {library = vim.api.nvim_get_runtime_file("", true)},
+					telemetry = {enable = false},
 				},
 			},
-		}
-		lspconfig.rust_analyzer.setup {
-			on_attach = on_attach,
-		}
+		})
+
+		vim.lsp.config("rust_analyzer", {
+			capabilities = capabilities,
+		})
+
+		vim.lsp.enable({ "clangd", "lua_ls", "rust_analyzer"})
+
 		vim.diagnostic.config({
-			signs = false,
-			underline = false,
+			signss = false,
+			undelnie = false,
 		})
 	end,
 }
