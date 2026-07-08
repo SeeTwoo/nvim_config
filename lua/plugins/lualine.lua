@@ -4,7 +4,7 @@ return {
 		config = function()
 			require("lualine").setup({
 				options = {
-					theme = require("blue_pink_lualine_theme"),
+					theme = require("ai_studio_line_theme"),
 					section_separators = { left = "", right = "" },
 					component_separators = { left = "", right = "" },
 				},
