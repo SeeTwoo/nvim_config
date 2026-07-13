@@ -7,4 +7,11 @@ require("set")
 require("stdheader")
 require("classes")
 require("config.lazy")
-vim.cmd.colorscheme("blue_pink_theme")
+
+local nvim_theme = os.getenv("NVIM_THEME")
+
+if nvim_theme == hypr then
+  vim.cmd.colorscheme("hypr_blue_pink_theme");
+else
+  vim.cmd.colorscheme("blue_pink_theme")
+end
