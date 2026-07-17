@@ -27,13 +27,3 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.colorcolumn = "81"
 	end,
 })
-
---[[vim.api.nvim_create_augroup("HideCursorInUI", {clear = true})
-
-vim.api.nvim_create_autocmd("FileType", {
-	group = "HideCursorInUI",
-	pattern = {"dashboard", "neo-tree"},
-	callback = function()
-		vim.api.nvim_out_write("\x1b[?25l")
-	end,
-})]]

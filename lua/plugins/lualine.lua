@@ -2,9 +2,15 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		config = function()
+      local theme
+      if os.getenv("NVIM_THEME") == "hypr" then
+        theme = "frosted_berries_lualine"
+      else
+        theme = blue_pink_lualine_theme
+      end
 			require("lualine").setup({
 				options = {
-					theme = require("ai_studio_line_theme"),
+					theme = require(theme),
 					section_separators = { left = "", right = "" },
 					component_separators = { left = "", right = "" },
 				},

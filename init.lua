@@ -10,8 +10,8 @@ require("config.lazy")
 
 local nvim_theme = os.getenv("NVIM_THEME")
 
-if nvim_theme == hypr then
-  vim.cmd.colorscheme("hypr_blue_pink_theme");
+if nvim_theme == "hypr" then
+  vim.cmd.colorscheme("frosted_berries_theme");
 else
   vim.cmd.colorscheme("blue_pink_theme")
 end
