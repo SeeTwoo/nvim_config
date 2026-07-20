@@ -5,7 +5,6 @@ vim.opt.shiftwidth = 4
 
 require("set")
 require("stdheader")
-require("classes")
 require("config.lazy")
 
 local nvim_theme = os.getenv("NVIM_THEME")

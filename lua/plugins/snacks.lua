@@ -1,10 +1,6 @@
 return {
 	"folke/snacks.nvim",
 	opts = {
-		---@type snacks.Config
-		indent = {
-			enabled = true
-		},
 		dashboard = {
 			preset = {
 			---@type snacks.dashboard.Item[]

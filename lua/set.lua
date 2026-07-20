@@ -2,6 +2,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.autoindent = true
 vim.opt.wrap = false
+vim.opt.mouse = ""
 
 vim.opt.guicursor = ""
 vim.opt.termguicolors = true
