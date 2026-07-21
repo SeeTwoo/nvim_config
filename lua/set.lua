@@ -2,7 +2,10 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.autoindent = true
 vim.opt.wrap = false
-vim.opt.mouse = ""
+
+if machine == "hypr_laptop" then
+  vim.opt.mouse = ""
+end
 
 vim.opt.guicursor = ""
 vim.opt.termguicolors = true
