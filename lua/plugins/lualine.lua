@@ -3,10 +3,10 @@ return {
 		"nvim-lualine/lualine.nvim",
 		config = function()
       local theme
-      if os.getenv("NVIM_THEME") == "hypr" then
+      if machine == "hypr_laptop" then
         theme = "frosted_berries_lualine"
       else
-        theme = blue_pink_lualine_theme
+        theme = "blue_pink_lualine_theme"
       end
 			require("lualine").setup({
 				options = {
